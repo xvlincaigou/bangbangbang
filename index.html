@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>超新星遗迹重元素扩散模拟</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  <body>
+  <div id="main-chart"></div>
+
+  <section class="info-panel">
+    <div id="time-display">时间: 0 年</div>
+    <div id="radius-display">冲击波半径: 0.00 pc</div>
+    <div id="temp-display">平均温度: 0 K</div>
+  </section>
+
+  <section class="controls floating-controls">
+    <button id="play-button">▶ 播放</button>
+    <button id="reset-button">⟲ 重置</button>
+    <label class="speed-control">
+      速度:
+      <input type="range" id="speed-slider" min="0.1" max="10" step="0.1" value="1">
+      <span id="speed-value">1.0x</span>
+    </label>
+    <label class="view-control">
+      视野尺度:
+      <input type="range" id="view-slider" min="2" max="30" step="0.5" value="10">
+      <span id="view-value">10.0 pc</span>
+    </label>
+    <label class="angle-control">
+      方位角:
+      <input type="range" id="azimuth-slider" min="0" max="360" step="1" value="45">
+      <span id="azimuth-value">45°</span>
+    </label>
+    <label class="angle-control">
+      仰角:
+      <input type="range" id="elevation-slider" min="-80" max="80" step="1" value="20">
+      <span id="elevation-value">20°</span>
+    </label>
+  </section>
+  
+  <script src="nova-model.js"></script>
+  <script src="data-manager.js"></script>
+  <script src="visualization.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
